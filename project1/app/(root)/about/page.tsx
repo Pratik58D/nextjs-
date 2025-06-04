@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+
+export const metadata = {
+  title : "Pratik Devkota",
+
+
+}
+
 
 const Page = () => {
-  throw new Error({message: "NOT IMPLEMENTED"})
   return (
     <div>About</div>
   )

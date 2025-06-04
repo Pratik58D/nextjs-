@@ -1,12 +1,26 @@
-import React from 'react'
+// app/layout.tsx
+import '../globals.css'
+import { ReactNode } from 'react'
+import { Inter } from 'next/font/google'
+import Navbar from '../components/navbar'
 
-const layout = ({children} : {children: React.ReactNode}) => {
-  return (
-    <div>
-        {/* <h1 className='text-blue-500'>Navbar</h1> */}
-        {children}
-        </div>
-  )
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata = {
+  title: 'My App',
+  description: 'A Next.js App',
 }
 
-export default layout
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+        
+        
+        </body>
+    </html>
+  )
+}
